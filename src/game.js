@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-//import './game.css';
+import './game.css';
 
 function Square(props) {
   return (
@@ -108,12 +107,5 @@ function calculateWinner(squares) {
   }
   return null;
 }
-
-// ========================================
-
-ReactDOM.render(
-  <Game />,
-  document.getElementById('root')
-);
 
 export default Game;

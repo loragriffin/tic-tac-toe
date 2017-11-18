@@ -7,10 +7,11 @@ ol, ul {
   padding-left: 30px;
 }
 
-.board-row:after {
+.board-row {
   clear: both;
   content: "";
-  display: table;
+  display: block;
+  margin-left: 0 auto;
 }
 
 .status {
@@ -20,16 +21,17 @@ ol, ul {
 .square {
   background: #fff;
   border: 1px solid #999;
+  border-radius: 0;
   float: left;
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 100px;
+  width: 100px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
 }
 
 .square:focus {
@@ -41,10 +43,11 @@ ol, ul {
 }
 
 .game {
-  display: flex;
-  flex-direction: row;
+  display: block;
+  margin: 20px auto 0 auto;
 }
 
 .game-info {
-  margin-left: 20px;
+  width: 300px;
+  margin: 20px auto;
 }
