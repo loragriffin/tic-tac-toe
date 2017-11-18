@@ -1,17 +1,35 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
-import BlurIcon from './bluricon';
+import Toolbar from 'material-ui/Toolbar';
+import Typography from 'material-ui/Typography';
+import './appbar.css';
 
-/**
- * A simple example of `AppBar` with an icon on the right.
- * By default, the left icon is a navigation-menu.
- */
-const AppBarExampleIcon = () => (
-  <AppBar
-    title="Tic-Tac-Toe"
-    iconElementLeft={<IconButton><BlurIcon /></IconButton>}
-  />
-);
+const styles = theme => ({
+  root: {
+    marginTop: theme.spacing.unit * 3,
+    width: '100%',
+  },
+});
 
-export default AppBarExampleIcon;
+function SimpleAppBar(props) {
+  const { classes } = props;
+  return (
+    <div className={classes.root}>
+      <AppBar position="static" color="default">
+        <Toolbar>
+          <Typography type="title" color="inherit">
+            Tic-Tac-Toe
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
+}
+
+SimpleAppBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(SimpleAppBar);

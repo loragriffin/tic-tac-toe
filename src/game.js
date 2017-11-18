@@ -50,7 +50,7 @@ handleClick(i) {
     }
 
     return (
-      <div>
+      <div className="board">
         <div className="status">{status}</div>
         <div className="board-row">
           {this.renderSquare(0)}
